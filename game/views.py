@@ -10,6 +10,9 @@ def Signup(request):
     return render(request, 'signup.html')
 
 def Signin(request):
-    return render(request, 'signin.html')    
+    return render(request, 'signin.html')
+
+def masterFn(request):
+    return render(request, 'usermaster.html')       
 
 

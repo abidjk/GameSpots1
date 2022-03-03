@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        h1=document.getElementById('heading');
+        console.log(h1);
+        p=document.getElementsByTagName('p');
+        console.log(p);
+        p1=document.getElementsByClassName('content')
+        console.log(p1)
+        function change(){
+            h1=document.getElementById('heading');
+            h1.innerHTML="Cybersquere - Users to creators"
+            p1=document.getElementsByClassName('content')
+            console.log(p1)
+            for(x of p1){
+                console.log(x)
+                x.innerHTML="AJK"
+                
+
+            }
+            console.log(window.location)
+        }
+    </script>
+</head>
+<body>
+    <h1 id='heading'>Cybersquere</h1>
+    <p class="content">Learn coding through Cybersquere</p>
+    <p class="content">Best platform to learn coding</p>
+    <input type="button" onclick="change()" value="click here">
+</body>
+</html>

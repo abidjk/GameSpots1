@@ -1,5 +1,7 @@
+{% extends 'usermaster.html' %}
 {% load static %}
-<!DOCTYPE html>
+{% block content %}
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,53 +12,78 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </head>
-<body>
-  <h1>testtttt</h1>
-  <h1 style="color: black;font: italic;" align="center">REGISTER</h1>
-    <div class="row"><div class="col-2"></div>
-        <div class="col-8">
-    <form class="container-fluid">
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
+<body> -->
+<!-- <img src="{% static 'images/badminton.jpg' %}" alt=""> -->
+<div class="jumbotron jumbotron-fluid"
+  style="height: 350px;background-image: url('/static/images/badminton.jpg');">
+  <div class="container text-center">
+    <h1 class="" style="color: white;font-size: 60px;">PARTNER WITH US</h1>
+    <a class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Register</a>
+  </div>
+</div>
+
+
+<div class="container p-5" style="background-color: rgb(167, 171, 182); border-radius: 30px;">
+
+  <h2 class="pb-3 text-center">COLLABORATE WITH US</h2>
+  <p>PlaySpots is the online portal and mobile app for sports enthusiasts in Kerala, we integrate sports with technology
+    to deliver a comprehensive sporting experience using location intelligence
+
+    We are helping facility owners and turf managers ditch their paper diaries and spreadsheets.
+    With our user-friendly booking manager, spend less time on the phone taking inquiries and watch bookings roll in.
+    Whatever your size of operation, from one pitch to hundreds we can facilitate your needs.
+
+    We empower businesses targeting turf owners in India especially the southern side of India to gain clients through
+    our turfs reservation service and collaborate with our community to increase outreach.
+
+    PlaySpots offers various packages for sports venues to help increase their marketing exposure, manage bookings and
+    streamline operations. Secure sports booking software is also available
+  </p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 class="modal-title" id="exampleModalLabel" align="center">PARTNERSHIP FORM</h5>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name">
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email">
           </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Court Name">
           </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option selected>Choose</option>
-              <option>Kerala</option>
-              <option>Tamil Nadu</option>
-              <option>Karnadaka</option>
-              <option>Goa</option>
+          <div class="form-group">
+            <select class="form-control" name="" id="">
+              <option value="" disabled selected>Sport Type</option>
+              <option value="">football</option>
+              <option value="">Cricket</option>
+              <option value="">Badminton</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="123456">
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Contact Number">
           </div>
-        </div>
-        <div class="alert alert-primary col-sm-6" role="alert">
-          Already Registered? <a href="{% url 'signin' %}" class="alert-link">Click Here</a>
-        </div>
-        <button type="submit" class="btn btn-primary"><center>Sign Up</center></button>
-      </form></div></div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="location">
+          </div>
 
-    
-</body>
-</html>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
